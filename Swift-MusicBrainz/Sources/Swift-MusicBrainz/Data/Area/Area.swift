@@ -6,14 +6,14 @@
 
 import Foundation
 
-public struct MBArea {
+public struct MBArea : Codable {
     public init() {
-        area = [MBArea]()
+        data = [MBAreaData]()
         count = 0
         offset = 0
     }
     
-    public var area:[MBArea]
+    public var data:[MBAreaData]
     public var count:Int
     public var offset:Int
 }

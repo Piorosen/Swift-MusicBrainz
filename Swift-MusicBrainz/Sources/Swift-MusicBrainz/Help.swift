@@ -11,13 +11,16 @@ import XMLParsing
 
 public struct MBMetadata : Codable {
     init() {
-        list = MBAnnotation()
+        annotation = MBAnnotation()
+        area = MBArea()
     }
     
-    public var list:MBAnnotation?
+    public var annotation:MBAnnotation?
+    public var area:MBArea?
     
     enum CodingKeys : String, CodingKey {
-        case list = "annotation-list"
+        case annotation = "annotation-list"
+        case area = "area-list"
     }
     
 }
@@ -74,7 +77,7 @@ final public class MBHelp {
         task.resume()
     }
     
-    public static func find(query:String, part:String) -> String? {
+    public static func find(query:String, part:String) -> MBMetadata? {
         let delay = DispatchSemaphore(value: 0)
         var data = String()
         
@@ -92,6 +95,6 @@ final public class MBHelp {
         let note1 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
 //        let note2 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
         
-        return "Success"
+        return note1
     }
 }
