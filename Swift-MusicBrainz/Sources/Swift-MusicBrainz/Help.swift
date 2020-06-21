@@ -17,10 +17,12 @@ public struct MBMetadata : Codable {
     
     public var annotation:MBAnnotation?
     public var area:MBArea?
+    public var release:MBRelease?
     
     enum CodingKeys : String, CodingKey {
         case annotation = "annotation-list"
         case area = "area-list"
+        case release = "release-list"
     }
     
 }
