@@ -13,7 +13,12 @@ public struct MBArea : Codable {
         offset = 0
     }
     
-    public var data:[MBAreaData]
-    public var count:Int
-    public var offset:Int
+    public var data:[MBAreaData]?
+    public var count:Int?
+    public var offset:Int?
+    
+    enum CodingKeys : String, CodingKey {
+        case data = "area"
+        case count, offset
+    }
 }

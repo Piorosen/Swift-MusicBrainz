@@ -12,5 +12,5 @@ public struct MBAreaRelationAreaLifespan : Codable  {
         ended = false
     }
     
-    public var ended:Bool
+    public var ended:Bool?
 }

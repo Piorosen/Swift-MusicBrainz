@@ -14,13 +14,13 @@ public struct MBAreaAlias : Codable {
         value = String()
     }
     
-    public var sortName:String
-    public var locale:String
-    public var value:String
+    public var sortName:String?
+    public var locale:String?
+    public var value:String?
     
     enum CodingKeys : String, CodingKey {
         case sortName = "sort-name"
         case locale
-        case value = "Value"
+        case value = "text"
     }
 }

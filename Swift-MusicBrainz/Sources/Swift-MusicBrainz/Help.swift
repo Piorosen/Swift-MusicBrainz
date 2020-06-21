@@ -94,7 +94,7 @@ final public class MBHelp {
         
         let note1 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
 //        let note2 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
-        
+        print(part)
         return note1
     }
 }

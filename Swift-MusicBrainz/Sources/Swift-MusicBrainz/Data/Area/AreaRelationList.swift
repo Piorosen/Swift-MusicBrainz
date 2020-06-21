@@ -13,8 +13,8 @@ public struct MBAreaRelationList : Codable  {
         targetType = String()
     }
     
-    public var relation:MBAreaRelation
-    public var targetType:String
+    public var relation:MBAreaRelation?
+    public var targetType:String?
     
     
     enum CodingKeys : String, CodingKey {

@@ -16,11 +16,11 @@ public struct MBAreaRelation : Codable  {
         typeId = String()
     }
     
-    public var target:String
-    public var direction:String
-    public var area:MBGArea
-    public var type:String
-    public var typeId:String
+    public var target:String?
+    public var direction:String?
+    public var area:MBGArea?
+    public var type:String?
+    public var typeId:String?
     
     enum CodingKeys : String, CodingKey {
         case target, direction, area, type

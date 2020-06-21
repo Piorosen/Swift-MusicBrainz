@@ -22,6 +22,12 @@ final class MusicBrainzSearchTests: XCTestCase {
         XCTAssertNotNil(result, "데이터 수신 실패")
     }
     
+    func testRelease() {
+        let query = MBRequestRelease(query: "MYTH")
+        let result = MBSearch.find(query: query)
+        XCTAssertNotNil(result, "데이터 수신 실패")
+    }
+    
     func testArtist() {
         let query = MBRequestArtist(query: "MYTH")
         let result = MBSearch.find(query: query)
@@ -58,11 +64,6 @@ final class MusicBrainzSearchTests: XCTestCase {
         XCTAssertNotNil(result, "데이터 수신 실패")
     }
     
-    func testRelease() {
-        let query = MBRequestRelease(query: "MYTH")
-        let result = MBSearch.find(query: query)
-        XCTAssertNotNil(result, "데이터 수신 실패")
-    }
     func testReleaseGroup() {
         let query = MBRequestReleaseGroup(query: "MYTH")
         let result = MBSearch.find(query: query)
