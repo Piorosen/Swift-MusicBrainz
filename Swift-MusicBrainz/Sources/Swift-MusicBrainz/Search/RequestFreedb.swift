@@ -14,6 +14,10 @@ import Foundation
 /// <param name="year           ">year</param>
 /// <param name="tracks         ">number of tracks in the release</param>
 public struct MBRequestFreedb : MBRequestProtocol {
+    public func getName() -> String {
+        return "freedb"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

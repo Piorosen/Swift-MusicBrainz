@@ -9,11 +9,14 @@ import Foundation
 
 
 public struct MBRequestArtist : MBRequestProtocol {
+    public func getName() -> String {
+        return "artist"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25
     
-    public var query       : String? = nil
     public var area        : String? = nil
     public var beginarea   : String? = nil
     public var endarea     : String? = nil

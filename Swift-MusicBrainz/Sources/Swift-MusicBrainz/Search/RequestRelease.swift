@@ -40,6 +40,10 @@ import Foundation
 /// <param name="tracksmedium               ">number of tracks on a medium in the release</param>
 /// <param name="type               ">
 public struct MBRequestRelease : MBRequestProtocol {
+    public func getName() -> String {
+        return "release"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

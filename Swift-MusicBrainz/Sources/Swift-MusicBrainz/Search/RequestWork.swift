@@ -19,6 +19,10 @@ import Foundation
 /// <param name="work               ">name of work</param>
 /// <param name="workaccent             ">name of the work with any accent characters retained</param>
 public struct MBRequestWork : MBRequestProtocol {
+    public func getName() -> String {
+        return "work"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

@@ -37,6 +37,10 @@ import Foundation
 /// <param name="type           ">
 /// <param name="video              ">true to only show video tracks</param>
 public struct MBRequestRecording : MBRequestProtocol {
+    public func getName() -> String {
+        return "recording"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

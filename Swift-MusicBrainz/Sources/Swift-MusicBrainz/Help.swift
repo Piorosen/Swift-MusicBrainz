@@ -11,13 +11,16 @@ import XMLParsing
 
 public struct MBMetadata : Codable {
     init() {
-        list = MBAnnotation()
+        annotation = MBAnnotation()
+        area = MBArea()
     }
     
-    public var list:MBAnnotation?
+    public var annotation:MBAnnotation?
+    public var area:MBArea?
     
     enum CodingKeys : String, CodingKey {
-        case list = "annotation-list"
+        case annotation = "annotation-list"
+        case area = "area-list"
     }
     
 }
@@ -86,12 +89,12 @@ final public class MBHelp {
         
         guard let dd = data.data(using: .utf8) else { return nil }
         
-        try? dd.write(to: URL(fileURLWithPath: "/Users/aoikazto/Desktop/test.xml"))
+        try? dd.write(to: URL(fileURLWithPath: "/Users/aoikazto/Desktop/result/\(part).xml"))
         
         
         let note1 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
 //        let note2 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
-        
+        print(part)
         return note1
     }
 }

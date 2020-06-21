@@ -14,6 +14,7 @@ public struct MBAnnotationData : Codable {
         type = String()
         score = 0
     }
+    
     public var entity:String?
     public var name:String?
     public var type:String?
