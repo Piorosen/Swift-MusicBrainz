@@ -8,6 +8,10 @@
 import Foundation
 
 public struct MBRequestArea : MBRequestProtocol {
+    public func getName() -> String {
+        return "area"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

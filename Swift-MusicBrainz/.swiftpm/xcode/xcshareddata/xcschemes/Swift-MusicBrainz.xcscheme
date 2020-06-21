@@ -43,7 +43,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            useTestSelectionWhitelist = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "Swift-MusicBrainzTests"
@@ -51,6 +52,50 @@
                BlueprintName = "Swift-MusicBrainzTests"
                ReferencedContainer = "container:">
             </BuildableReference>
+            <SelectedTests>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testAnnotation()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testArea()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testArtist()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testCdstub()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testFreedb()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testLabel()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testPlace()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testRecording()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testRelease()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testReleaseGroup()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testTag()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzSearchTests/testWork()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzTests/testExample()">
+               </Test>
+               <Test
+                  Identifier = "MusicBrainzTests/testPerformanceExample()">
+               </Test>
+            </SelectedTests>
          </TestableReference>
       </Testables>
    </TestAction>

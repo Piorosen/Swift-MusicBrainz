@@ -3,5 +3,5 @@ import XCTest
 import Swift_MusicBrainzTests
 
 var tests = [XCTestCaseEntry]()
-tests += MusicBrainzTests.allTests()
+tests += MusicBrainzSearchTests.allTests()
 XCTMain(tests)

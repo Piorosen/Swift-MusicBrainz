@@ -12,6 +12,10 @@ import Foundation
 // string name = null
 // string entity = null
 public struct MBRequestTag : MBRequestProtocol {
+    public func getName() -> String {
+        return "tag"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

@@ -9,18 +9,8 @@ import Foundation
 
 public class MBSearch {
 //    public static func 
-    public static func find(query: MBRequestProtocol) -> Void {
-        
-        switch query {
-        case let query as MBRequestAnnotation:
-            let data = MBHelp.searchToString(query)
-            let p = MBHelp.find(query: data, part: "annotation")
-            
-            break
-        default:
-            
-            break;
-        }
-        
+    public static func find(query: MBRequestProtocol) -> String? {
+        let data = MBHelp.searchToString(query)
+        return MBHelp.find(query: data, part: query.getName())
     }
 }

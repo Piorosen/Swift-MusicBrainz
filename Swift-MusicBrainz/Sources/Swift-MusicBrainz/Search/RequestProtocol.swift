@@ -14,4 +14,6 @@ public protocol MBRequestProtocol {
     var query:String { get set }
     var offset:Int { get set }
     var limit:Int { get set }
+    
+    func getName() -> String
 }

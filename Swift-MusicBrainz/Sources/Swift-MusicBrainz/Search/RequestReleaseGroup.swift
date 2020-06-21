@@ -22,7 +22,11 @@ import Foundation
 /// <param name="status             ">status of a release that appears within the release group</param>
 /// <param name="tag                ">a tag that appears on the release group</param>
 /// <param name="type                   ">
-public struct MBRequestRelease : MBRequestProtocol {
+public struct MBRequestReleaseGroup : MBRequestProtocol {
+    public func getName() -> String {
+        return "release-group"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

@@ -74,7 +74,7 @@ final public class MBHelp {
         task.resume()
     }
     
-    public static func find(query:String, part:String) -> MBMetadata? {
+    public static func find(query:String, part:String) -> String? {
         let delay = DispatchSemaphore(value: 0)
         var data = String()
         
@@ -86,12 +86,12 @@ final public class MBHelp {
         
         guard let dd = data.data(using: .utf8) else { return nil }
         
-        try? dd.write(to: URL(fileURLWithPath: "/Users/aoikazto/Desktop/test.xml"))
+        try? dd.write(to: URL(fileURLWithPath: "/Users/aoikazto/Desktop/result/\(part).xml"))
         
         
         let note1 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
 //        let note2 = try? XMLDecoder().decode(MBMetadata.self, from: dd)
         
-        return note1
+        return "Success"
     }
 }

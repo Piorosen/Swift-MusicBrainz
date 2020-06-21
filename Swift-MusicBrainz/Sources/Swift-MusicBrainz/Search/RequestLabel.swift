@@ -24,6 +24,10 @@ import Foundation
 /// <param name="type           ">label type</param>
 /// <param name="tag            ">folksonomy tag</param>
 public struct MBRequestLabel : MBRequestProtocol {
+    public func getName() -> String {
+        return "label"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25

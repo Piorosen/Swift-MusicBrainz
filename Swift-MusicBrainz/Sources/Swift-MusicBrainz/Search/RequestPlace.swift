@@ -20,6 +20,10 @@ import Foundation
 /// <param name="sortname           ">place sort name</param>
 /// <param name="type           ">the aliases/misspellings for this place</param>
 public struct MBRequestPlace : MBRequestProtocol {
+    public func getName() -> String {
+        return "place"
+    }
+    
     public var query: String = String()
     public var offset: Int = 0
     public var limit: Int = 25
